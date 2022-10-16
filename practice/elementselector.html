@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="heading1" class="A"> this is heading 1</h1>
+        <h2 id="heading2"  class="A"> this is heading 2</h2>
+
+        <script>
+            const a = document.getElementById('heading1');
+            console.log(a.innerText);
+            a.innerHTML = "Modified Text";
+
+            const b = document.getElementsByClassName("A");
+            b[0].innerHTML = "first heading";
+            b[1].innerHTML = "second heading";
+            console.log(b);
+            // console.log(b.innerText);
+        </script>
+
+    </body>
+</html>

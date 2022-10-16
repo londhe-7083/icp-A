@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            
+            .my-img{
+                height: 100px;
+                display: flex;
+                justify-content: space-between;
+                margin-left: 33px;
+
+            }
+
+            button{
+                margin: 10px;
+            }
+
+            body{
+                border: 2px solid black;
+                width: 50vw;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <img src="./moon.png" class="my-img"/>
+        <button onClick="showsun()">show sun</button>
+        <button onClick="showmoon()">show moon</button>
+
+        <script>
+            const imgElement = document.querySelector(".my-img");
+            // imgElement.src="./moon.png";
+            
+            function showsun(){
+                
+                const imgElement = document.querySelector(".my-img");
+                imgElement.src = "./sunn.png";
+            }
+            const imgElementA = document.querySelector(".my-img");
+            
+            function showmoon(){
+                const imgElementA = document.querySelector(".my-img");
+                imgElementA.src = "./moon.png"
+            }
+        </script>
+
+    </body>
+</html>

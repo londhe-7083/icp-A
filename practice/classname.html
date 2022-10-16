@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id='first' class="name">this is heading 1</h1>
+        <h2 id="second" class="name">this is <b> heading tag</b> heading 2</h2>
+        <i id="xyz"> this is italic element 1 </i><br><br>
+        <i id="xyz"> this is italic element 2 </i>
+
+        <script>
+            const tags= document.getElementsByClassName("name");
+            console.log(tags);
+            console.log(tags[0]);
+
+            tags[0].innerHTML=" first element";
+            // tags[0].innerTEXT=" first element";
+
+            const tag = document.getElementsByTagName("b");
+            console.log(tag);
+            tag[0].innerHTML="Modified text";
+            
+            const elements = document.querySelectorAll("#xyz");
+            console.log(elements[0]);
+            elements[0].innerHTML="shubhamlondhe";
+
+
+        </script>
+    </body>
+</html>
