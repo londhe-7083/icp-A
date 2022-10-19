@@ -5,6 +5,22 @@
     <title>
         calculator
     </title>
+    <Script>
+        function PressButton(buttonvalue){
+            console.log (buttonvalue)
+            let calText = document.querySelector(" .input-screen") .value + buttonvalue +"";
+            document.querySelector(".input-screen").value = calText;
+        }
+
+        function calculate(){
+            let caltext = document.querySelector(" .input-screen").value;
+            document.querySelector(".input-screen").value = eval(caltext);
+        }
+
+        function clearscreen(){
+            document.querySelector(".input-screen").value="";
+        }
+    </Script>
     <style>   
         .calculator-container {
             width: 300px;
@@ -98,35 +114,35 @@
     <div class="calculator-container">
 
         <div class="rowof">
-            <button class="btn">AC</button>
-            <button class="btn">DEL</button>
-            <button class="btn">ON</button>
-            <button class="btn">OFF</button>
+            <button class="btn" OnClick="clearscreen('AC')">AC</button>
+            <button class="btn" OnClick="PressButton('DEL')">DEL</button>
+            <button class="btn" OnClick="PressButton('ON')">ON</button>
+            <button class="btn" OnClick="PressButton('OFF')">OFF</button>
            
         </div>
         <div class="row">
-            <button class="btn">7</button>
-            <button class="btn">8</button>
-            <button class="btn">9</button>
-            <button class="btn orange">÷</button>
+            <button class="btn" OnClick="PressButton(7)">7</button>
+            <button class="btn" OnClick="PressButton(8)">8</button>
+            <button class="btn" OnClick="PressButton(9)">9</button>
+            <button class="btn orange" OnClick="PressButton('/')">÷</button>
         </div>
         <div class="row">
-            <button class="btn">4</button>
-            <button class="btn">5</button>
-            <button class="btn">6</button>
-            <button class="btn orange">x</button>
+            <button class="btn" OnClick="PressButton(4)">4</button>
+            <button class="btn" OnClick="PressButton(5)">5</button>
+            <button class="btn" OnClick="PressButton(6)">6</button>
+            <button class="btn orange" OnClick="PressButton('*')">x</button>
         </div>
         <div class="row">
-            <button class="btn">1</button>
-            <button class="btn">2</button>
-            <button class="btn">3</button>
-            <button class="btn orange">-</button>
+            <button class="btn" OnClick="PressButton(1)">1</button>
+            <button class="btn" OnClick="PressButton(2)">2</button>
+            <button class="btn" OnClick="PressButton(3)">3</button>
+            <button class="btn orange" OnClick="PressButton('-')">-</button>
         </div>
         <div class="row">
-            <button class="btn">0</button>
-            <button class="btn orange">.</button>
-            <button class="btn orange">+</button>
-            <button class="btn orange">=</button>
+            <button class="btn" OnClick="PressButton(0)">0</button>
+            <button class="btn orange" OnClick="PressButton('.')">.</button>
+            <button class="btn orange" OnClick="PressButton('+')">+</button>
+            <button class="btn orange" OnClick="calculate('=')">=</button>
         </div>
 
     </div>
